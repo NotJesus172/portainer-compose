@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  crafty:
+    container_name: PlayMC
+    image: registry.gitlab.com/crafty-controller/crafty-4:latest
+    restart: always
+    environment:
+        - TZ=Etc/UTC
+    ports:
+        - "8443:8443" # HTTPS
+        - "8123:8123" # DYNMAP
+        - "25565:25565" # MC SERV PORT
+    volumes:
+        - /srv/docker/crafty-playmc/backups:/crafty/backups
+        - /srv/docker/crafty-playmc/logs:/crafty/logs
+        - /srv/docker/crafty-playmc/servers:/crafty/servers
+        - /srv/docker/crafty-playmc/config:/crafty/app/config
+        - /srv/docker/crafty-playmc/import:/crafty/import
