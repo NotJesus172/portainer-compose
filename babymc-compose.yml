@@ -10,7 +10,7 @@ services:
     ports:
         - "8443:8443" # HTTPS
         - "8123:8123" # DYNMAP
-        - "25565:25565" # MC SERV PORT RANGE
+        - "22665:25565" # MC SERV PORT RANGE
     volumes:
         - /srv/docker/crafty-babymc/backups:/crafty/backups
         - /srv/docker/crafty-babymc/logs:/crafty/logs

@@ -13,10 +13,10 @@ services:
         babymc.silvera.win=172.20.41.2:22665
         playmc.nsftali.xyz=172.20.41.3:22666
         playmc.silvera.win=172.20.41.3:22666
-        modmc.naftali.xyz=172.20.41.4:22667
-        modmc.silvera.win=172.20.41.4:22667
-        grindmc.naftali.xyz=172.20.41.5:22668
-        grindmc.silvera.win=172.20.41.5:22668
+        stoneblock.naftali.xyz=172.20.41.4:22667
+        stoneblock.silvera.win=172.20.41.4:22667
+        grind.naftali.xyz=172.20.41.5:22668
+        grind.silvera.win=172.20.41.5:22668
     ports:
       - "25565:25565"
       # bind the API port to only loopback to avoid external exposure

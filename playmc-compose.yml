@@ -10,7 +10,7 @@ services:
     ports:
         - "8443:8443" # HTTPS
         - "8123:8123" # DYNMAP
-        - "25565:25565" # MC SERV PORT
+        - "22666:25565" # MC SERV PORT
     volumes:
         - /srv/docker/crafty-playmc/backups:/crafty/backups
         - /srv/docker/crafty-playmc/logs:/crafty/logs
