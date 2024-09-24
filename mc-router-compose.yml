@@ -1,0 +1,23 @@
+services:
+  router:
+    image: ${MC_ROUTER_IMAGE:-itzg/mc-router}
+    depends_on:
+      - forge
+      - vanilla
+    environment:
+      # enable API
+      API_BINDING: ":25564"
+      DEBUG: true
+      MAPPING: |
+        babymc.naftali.xyz=172.20.41.2:22665
+        babymc.silvera.win=172.20.41.2:22665
+        playmc.nsftali.xyz=172.20.41.3:22666
+        playmc.silvera.win=172.20.41.3:22666
+        modmc.naftali.xyz=172.20.41.4:22667
+        modmc.silvera.win=172.20.41.4:22667
+        grindmc.naftali.xyz=172.20.41.5:22668
+        grindmc.silvera.win=172.20.41.5:22668
+    ports:
+      - "25565:25565"
+      # bind the API port to only loopback to avoid external exposure
+      - "127.0.0.1:25564:25564"
