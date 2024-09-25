@@ -12,9 +12,9 @@ services:
         playmc.naftali.xyz=172.20.41.3:22666
         playmc.naftali.local=172.20.41.3:22666
         playmc.silvera.win=172.20.41.3:22666
-        stoneblock.naftali.xyz=172.20.41.4:22667
-        stoneblock.naftali.local=172.20.41.4:22667
-        stoneblock.silvera.win=172.20.41.4:22667
+        modmc.naftali.xyz=172.20.41.4:22667
+        modmc.naftali.local=172.20.41.4:22667
+        modmc.silvera.win=172.20.41.4:22667
         grind.naftali.xyz=172.20.41.5:22668
         grind.naftali.local=172.20.41.5:22668
         grind.silvera.win=172.20.41.5:22668
