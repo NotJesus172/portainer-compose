@@ -7,12 +7,16 @@ services:
       DEBUG: true
       MAPPING: |
         babymc.naftali.xyz=172.20.41.2:22665
+        babymc.naftali.local=172.20.41.2:22665
         babymc.silvera.win=172.20.41.2:22665
-        playmc.nsftali.xyz=172.20.41.3:22666
+        playmc.naftali.xyz=172.20.41.3:22666
+        playmc.naftali.local=172.20.41.3:22666
         playmc.silvera.win=172.20.41.3:22666
         stoneblock.naftali.xyz=172.20.41.4:22667
+        stoneblock.naftali.local=172.20.41.4:22667
         stoneblock.silvera.win=172.20.41.4:22667
         grind.naftali.xyz=172.20.41.5:22668
+        grind.naftali.local=172.20.41.5:22668
         grind.silvera.win=172.20.41.5:22668
     ports:
       - "25565:25565"
