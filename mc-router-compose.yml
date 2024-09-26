@@ -1,6 +1,7 @@
 services:
   router:
     image: ${MC_ROUTER_IMAGE:-itzg/mc-router}
+    restart: always
     environment:
       # enable API
       API_BINDING: ":25564"
