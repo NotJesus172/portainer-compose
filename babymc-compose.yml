@@ -1,19 +1,63 @@
-version: '3'
-
 services:
-  crafty:
-    container_name: BabyMC
-    image: registry.gitlab.com/crafty-controller/crafty-4:latest
-    restart: always
+  bungeecord:
+    image: itzg/mc-proxy:java21
     environment:
-        - TZ=Etc/UTC
+      TYPE: BUNGEECORD
     ports:
-        - "8443:8443" # HTTPS
-        - "8123:8123" # DYNMAP
-        - "22665:25565" # MC SERV PORT RANGE
+      - "22665:25565"
+    networks:
+      - babymc
     volumes:
-        - /srv/docker/crafty-babymc/backups:/crafty/backups
-        - /srv/docker/crafty-babymc/logs:/crafty/logs
-        - /srv/docker/crafty-babymc/servers:/crafty/servers
-        - /srv/docker/crafty-babymc/config:/crafty/app/config
-        - /srv/docker/crafty-babymc/import:/crafty/import
+      - "/srv/docker/minecraft/babymc/bungeecord:/server"
+  lobby:
+    image: itzg/minecraft-server:java21
+    environment:
+      EULA: true
+      TYPE: PAPER
+      ONLINE_MODE: "FALSE"
+    ports:
+      - "22666"
+    networks:
+      - babymc
+    volumes:
+      - 
+  island:
+    image: itzg/minecraft-server:java21
+    environment:
+      EULA: true
+      TYPE: PAPER
+      ONLINE_MODE: "FALSE"
+    ports:
+      - "25567"
+    networks:
+      - babymc
+    volumes:
+      -  
+  skyblock:
+    image: itzg/minecraft-server:java21
+    environment:
+      EULA: true
+      TYPE: PAPER
+      ONLINE_MODE: "FALSE"
+    ports:
+      - "25568"
+    networks:
+      - babymc
+    volumes:
+      - 
+  zoo:
+    image: itzg/minecraft-server:java21
+    environment:
+      EULA: true
+      TYPE: PAPER
+      ONLINE_MODE: "FALSE"
+    ports:
+      - "25569"
+    networks:
+      - babymc
+    volumes:
+      - 
+
+networks:
+  babymc:
+    name: babymc
