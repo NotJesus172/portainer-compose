@@ -12,4 +12,4 @@ services:
       CF_SERVER_MOD: /modpacks/SkyFactory-4_Server_4.2.2.zip
       MEMORY: 4g
     ports:
-      - 25565:25565
+      - 62955:25565

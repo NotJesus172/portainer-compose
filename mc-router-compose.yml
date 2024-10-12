@@ -7,8 +7,8 @@ services:
       API_BINDING: ":25564"
       DEBUG: true
       MAPPING: |
-        babymc.naftali.xyz=172.20.41.2:22665
-        babymc.silvera.win=172.20.41.2:22665
+        babymc.naftali.xyz=10.255.65.1:22665
+        babymc.silvera.win=10.255.65.1:22665
         playmc.naftali.xyz=172.20.41.3:29913
         playmc.silvera.win=172.20.41.3:29913
         modmc.naftali.xyz=172.20.41.4:62955
