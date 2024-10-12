@@ -20,7 +20,7 @@ services:
     networks:
       - babymc
     volumes:
-      - 
+      - "/srv/docker/minecraft/babymc/lobby:/data"
   island:
     image: itzg/minecraft-server:java21
     environment:
@@ -32,7 +32,7 @@ services:
     networks:
       - babymc
     volumes:
-      -  
+      -  "/srv/docker/minecraft/babymc/island:/data"
   skyblock:
     image: itzg/minecraft-server:java21
     environment:
@@ -44,7 +44,7 @@ services:
     networks:
       - babymc
     volumes:
-      - 
+      - "/srv/docker/minecraft/babymc/skyblock:/data"
   zoo:
     image: itzg/minecraft-server:java21
     environment:
@@ -56,7 +56,7 @@ services:
     networks:
       - babymc
     volumes:
-      - 
+      - "/srv/docker/minecraft/babymc/zoo:/data"
 
 networks:
   babymc:

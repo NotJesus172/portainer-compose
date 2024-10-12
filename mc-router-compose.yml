@@ -9,12 +9,12 @@ services:
       MAPPING: |
         babymc.naftali.xyz=172.20.41.2:22665
         babymc.silvera.win=172.20.41.2:22665
-        playmc.naftali.xyz=172.20.41.3:22666
-        playmc.silvera.win=172.20.41.3:22666
-        modmc.naftali.xyz=172.20.41.4:22667
-        modmc.silvera.win=172.20.41.4:22667
-        grind.naftali.xyz=172.20.41.5:22668
-        grind.silvera.win=172.20.41.5:22668
+        playmc.naftali.xyz=172.20.41.3:29913
+        playmc.silvera.win=172.20.41.3:29913
+        modmc.naftali.xyz=172.20.41.4:62955
+        modmc.silvera.win=172.20.41.4:62955
+        grind.naftali.xyz=172.20.41.5:52210
+        grind.silvera.win=172.20.41.5:52210
     ports:
       - "25565:25565"
       # bind the API port to only loopback to avoid external exposure

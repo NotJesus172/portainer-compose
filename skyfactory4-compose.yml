@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  mc:
+    image: itzg/minecraft-server:java8
+    volumes:
+      - /srv/docker/minecraft/skyfactory4_modpacks:/modpacks:ro
+      - /srv/docker/minecraft/skyfactory4:/data
+    environment:
+      EULA: "TRUE"
+      TYPE: CURSEFORGE
+      CF_SERVER_MOD: /modpacks/SkyFactory-4_Server_4.2.2.zip
+      MEMORY: 4g
+    ports:
+      - 25565:25565
