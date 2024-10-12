@@ -1,61 +1,81 @@
 services:
     404-a:
+        container_name: app-down
         image: ghcr.io/tarampampam/error-pages
-        ports: 
-            - "38635:8080"
+        restart: always
         environment:
             TEMPLATE_NAME: app-down
-    404-b:
-        image: ghcr.io/tarampampam/error-pages
         ports: 
-            - "19318:8080"
+            - "38635:8080"
+    404-b:
+        container_name: cats
+        image: ghcr.io/tarampampam/error-pages
+        restart: always
         environment:
             TEMPLATE_NAME: cats
-    404-c:
-        image: ghcr.io/tarampampam/error-pages
         ports: 
-            - "45024:8080"
+            - "19318:8080"
+    404-c:
+        container_name: connection
+        image: ghcr.io/tarampampam/error-pages
+        restart: always
         environment:
             TEMPLATE_NAME: connection
-    404-d:
-        image: ghcr.io/tarampampam/error-pages
         ports: 
-            - "61396:8080"
+            - "45024:8080"
+    404-d:
+        container_name: ghost
+        image: ghcr.io/tarampampam/error-pages
+        restart: always
         environment:
             TEMPLATE_NAME: ghost
-    404-e:
-        image: ghcr.io/tarampampam/error-pages
         ports: 
-            - "20664:8080"
+            - "61396:8080"
+    404-e:
+        container_name: hacker-terminal
+        image: ghcr.io/tarampampam/error-pages
+        restart: always
         environment:
             TEMPLATE_NAME: hacker-terminal
-    404-f:
-        image: ghcr.io/tarampampam/error-pages
         ports: 
-            - "53516:8080"
+            - "20664:8080"
+    404-f:
+        container_name: l7
+        image: ghcr.io/tarampampam/error-pages
+        restart: always
         environment:
             TEMPLATE_NAME: l7
-    404-g:
-        image: ghcr.io/tarampampam/error-pages
         ports: 
-            - "11723:8080"
+            - "53516:8080"
+    404-g:
+        container_name: lost-in-space
+        image: ghcr.io/tarampampam/error-pages
+        restart: always
         environment:
             TEMPLATE_NAME: lost-in-space
-    404-h:
-        image: ghcr.io/tarampampam/error-pages
         ports: 
-            - "48057:8080"
+            - "11723:8080"
+    404-h:
+        container_name: noise
+        image: ghcr.io/tarampampam/error-pages
+        restart: always
         environment:
             TEMPLATE_NAME: noise
-    404-i:
-        image: ghcr.io/tarampampam/error-pages
         ports: 
-            - "29826:8080"
+            - "48057:8080"
+    404-i:
+        container_name: orient
+        image: ghcr.io/tarampampam/error-pages
+        restart: always
         environment:
             TEMPLATE_NAME: orient
-    404-j:
-        image: ghcr.io/tarampampam/error-pages
         ports: 
-            - "58553:8080"
+            - "29826:8080"
+    404-j:
+        container_name: shuffle
+        image: ghcr.io/tarampampam/error-pages
+        restart: always
         environment:
             TEMPLATE_NAME: shuffle
+        ports: 
+            - "58553:8080"
