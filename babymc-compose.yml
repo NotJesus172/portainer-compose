@@ -1,6 +1,6 @@
 services:
   bungeecord:
-    image: itzg/mc-proxy:java21
+    image: itzg/mc-proxy:java17
     environment:
       TYPE: BUNGEECORD
     ports:
@@ -10,49 +10,49 @@ services:
     volumes:
       - "/srv/docker/minecraft/babymc/bungeecord:/server"
   lobby:
-    image: itzg/minecraft-server:java21
+    image: itzg/minecraft-server:java17
     environment:
       EULA: true
       TYPE: PAPER
       ONLINE_MODE: "FALSE"
     ports:
-      - "22666"
+      - "25566:25565"
     networks:
       - babymc
     volumes:
       - "/srv/docker/minecraft/babymc/lobby:/data"
   island:
-    image: itzg/minecraft-server:java21
+    image: itzg/minecraft-server:java17
     environment:
       EULA: true
       TYPE: PAPER
       ONLINE_MODE: "FALSE"
     ports:
-      - "25567"
+      - "25567:25565"
     networks:
       - babymc
     volumes:
       -  "/srv/docker/minecraft/babymc/island:/data"
   skyblock:
-    image: itzg/minecraft-server:java21
+    image: itzg/minecraft-server:java17
     environment:
       EULA: true
       TYPE: PAPER
       ONLINE_MODE: "FALSE"
     ports:
-      - "25568"
+      - "25568:25565"
     networks:
       - babymc
     volumes:
       - "/srv/docker/minecraft/babymc/skyblock:/data"
   zoo:
-    image: itzg/minecraft-server:java21
+    image: itzg/minecraft-server:java17
     environment:
       EULA: true
       TYPE: PAPER
       ONLINE_MODE: "FALSE"
     ports:
-      - "25569"
+      - "25569:25565"
     networks:
       - babymc
     volumes:

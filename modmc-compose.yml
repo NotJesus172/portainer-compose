@@ -1,0 +1,35 @@
+services:
+  bungeecord:
+    image: itzg/mc-proxy:java8
+    environment:
+      TYPE: BUNGEECORD
+    ports:
+      - "62955:25565"
+    networks:
+      - babymc
+    volumes:
+      - "/srv/docker/minecraft/babymc/bungeecord:/server"
+  lobby:
+    image: itzg/minecraft-server:java8
+    environment:
+      EULA: true
+      TYPE: PAPER
+      ONLINE_MODE: "FALSE"
+    ports:
+      - "22666"
+    networks:
+      - babymc
+    volumes:
+      - "/srv/docker/minecraft/babymc/lobby:/data"
+  island:
+    image: itzg/minecraft-server:java8
+    environment:
+      EULA: true
+      TYPE: PAPER
+      ONLINE_MODE: "FALSE"
+    ports:
+      - "25567"
+    networks:
+      - babymc
+    volumes:
+      -  "/srv/docker/minecraft/babymc/island:/data"
