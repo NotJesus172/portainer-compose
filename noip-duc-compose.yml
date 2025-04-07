@@ -3,7 +3,7 @@ services:
     container_name: noip-duc
     image: ghcr.io/noipcom/noip-duc:latest
     environment:
-      NOIP_USERNAME=7d27wx3
-      NOIP_PASSWORD=iPyaiWMLLqi1
-      NOIP_HOSTNAMES=all.ddnskey.com
+      - NOIP_USERNAME=7d27wx3
+      - NOIP_PASSWORD=iPyaiWMLLqi1
+      - NOIP_HOSTNAMES=all.ddnskey.com
     restart: always
