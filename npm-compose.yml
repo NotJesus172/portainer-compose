@@ -22,4 +22,4 @@ services:
 
     volumes:
       - /srv/docker/nginx-proxy-manager/data:/data
-      - /srv/docker/nginx-proxy-manager/letsencrypt:/etc/letsencrypt
+      - /etc/letsencrypt:/etc/letsencrypt
