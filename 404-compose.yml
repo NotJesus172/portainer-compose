@@ -8,13 +8,13 @@ services:
         ports: 
             - "38635:8080"
     404-b:
-        container_name: cats
+        container_name: shuffle
         image: ghcr.io/tarampampam/error-pages
         restart: always
         environment:
-            TEMPLATE_NAME: cats
+            TEMPLATE_NAME: shuffle
         ports: 
-            - "19318:8080"
+            - "58553:8080"
     404-c:
         container_name: connection
         image: ghcr.io/tarampampam/error-pages
@@ -71,11 +71,3 @@ services:
             TEMPLATE_NAME: orient
         ports: 
             - "29826:8080"
-    404-j:
-        container_name: shuffle
-        image: ghcr.io/tarampampam/error-pages
-        restart: always
-        environment:
-            TEMPLATE_NAME: shuffle
-        ports: 
-            - "58553:8080"
